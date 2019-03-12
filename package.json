@@ -3,11 +3,10 @@
 	"version": "6.2.1",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
-	"repository": "cdeutsch/query-string-es5-with-types",
+	"repository": "manuszep/query-string-es5-with-types",
 	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"name": "Emmanuel Szép",
+		"email": "manuszep@gmail.com"
 	},
 	"engines": {
 		"node": ">=6"
@@ -38,8 +37,7 @@
 		"searchparams"
 	],
 	"dependencies": {
-		"decode-uri-component": "^0.2.0",
-		"strict-uri-encode": "^2.0.0"
+		"decode-uri-component": "^0.2.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",

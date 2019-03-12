@@ -1,6 +1,13 @@
 'use strict';
-const strictUriEncode = require('strict-uri-encode');
 const decodeComponent = require('decode-uri-component');
+
+function replaceUriParts(x) {
+	return '%' + x.charCodeAt(0).toString(16).toUpperCase();
+}
+
+function strictUriEncode(str) {
+	encodeURIComponent(str).replace(/[!'()*]/g, replaceUriParts);
+}
 
 function encoderForArrayFormat(options) {
 	switch (options.arrayFormat) {

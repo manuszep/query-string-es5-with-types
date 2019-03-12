@@ -10,9 +10,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var strictUriEncode = require('strict-uri-encode');
-
 var decodeComponent = require('decode-uri-component');
+
+function replaceUriParts(x) {
+  return '%' + x.charCodeAt(0).toString(16).toUpperCase();
+}
+
+function strictUriEncode(str) {
+  encodeURIComponent(str).replace(/[!'()*]/g, replaceUriParts);
+}
 
 function encoderForArrayFormat(options) {
   switch (options.arrayFormat) {
