@@ -6,7 +6,7 @@ function replaceUriParts(x) {
 }
 
 function strictUriEncode(str) {
-	encodeURIComponent(str).replace(/[!'()*]/g, replaceUriParts);
+	return encodeURIComponent(str).replace(/[!'()*]/g, replaceUriParts);
 }
 
 function encoderForArrayFormat(options) {
